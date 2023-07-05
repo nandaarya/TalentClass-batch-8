@@ -35,7 +35,11 @@ class MainActivity : AppCompatActivity() {
                 binding.etSemester.error = "Semester tidak boleh kosong"
             }
 
-            if (name.isNotEmpty() && email.isNotEmpty() && jurusan.isNotEmpty() && semester.isNotEmpty()) {
+            if (!email.matches(Regex("[a-zA-Z\\d._-]+@gmail.com"))) {
+                binding.etEmail.error = "Gunakan email @gmail.com"
+            }
+
+            if (name.isNotEmpty() && email.isNotEmpty() && jurusan.isNotEmpty() && semester.isNotEmpty() && email.matches(Regex("[a-zA-Z\\d._-]+@gmail.com"))) {
                 val intent = Intent(this, ShowDataActivity::class.java)
                 intent.putExtra("name", name)
                 intent.putExtra("email", email)
