@@ -12,7 +12,7 @@
         android:theme="@style/Theme.TugasDay2App"
         tools:targetApi="31">
         <activity
-            android:name=".showData"
+            android:name=".ShowDataActivity"
             android:exported="false" />
         <activity
             android:name=".show_data"
