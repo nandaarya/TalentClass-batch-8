@@ -19,12 +19,30 @@ class MainActivity : AppCompatActivity() {
             val jurusan = binding.etJurusan.text.toString()
             val semester = binding.etSemester.text.toString()
 
-            val intent = Intent(this, ShowDataActivity::class.java)
-            intent.putExtra("name", name)
-            intent.putExtra("email", email)
-            intent.putExtra("jurusan", jurusan)
-            intent.putExtra("semester", semester)
-            startActivity(intent)
+            if (name.isEmpty()) {
+                binding.etName.error = "Nama tidak boleh kosong"
+            }
+
+            if (email.isEmpty()) {
+                binding.etEmail.error = "Email tidak boleh kosong"
+            }
+
+            if (jurusan.isEmpty()) {
+                binding.etJurusan.error = "Jurusan tidak boleh kosong"
+            }
+
+            if (semester.isEmpty()) {
+                binding.etSemester.error = "Semester tidak boleh kosong"
+            }
+
+            if (name.isNotEmpty() && email.isNotEmpty() && jurusan.isNotEmpty() && semester.isNotEmpty()) {
+                val intent = Intent(this, ShowDataActivity::class.java)
+                intent.putExtra("name", name)
+                intent.putExtra("email", email)
+                intent.putExtra("jurusan", jurusan)
+                intent.putExtra("semester", semester)
+                startActivity(intent)
+            }
         }
     }
 }
