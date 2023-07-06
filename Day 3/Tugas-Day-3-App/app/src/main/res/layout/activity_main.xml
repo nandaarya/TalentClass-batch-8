@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_margin="24dp"
+        android:textSize="28sp"
         android:text="Daftar Pengguna" />
     
     <androidx.recyclerview.widget.RecyclerView

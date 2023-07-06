@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="24dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".DetailUserActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Detail Pengguna"
+        android:textSize="28sp"
+        android:layout_margin="24dp"/>
+
+    <ImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_margin="24dp"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Nama"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Email"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tv_jurusan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Jurusan"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tv_semester"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Semester"
+        android:textSize="24sp" />
+
+</LinearLayout>
