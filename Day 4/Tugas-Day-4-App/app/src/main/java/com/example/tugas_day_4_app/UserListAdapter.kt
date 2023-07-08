@@ -59,7 +59,7 @@ class UserListAdapter : RecyclerView.Adapter<UserListAdapter.UserListViewHolder>
             binding.tvName.text = nameNow
             binding.tvEmail.text = emailNow
             binding.tvJurusan.text = jurusanNow
-            binding.tvSemester.text = semesterNow.toString()
+            binding.tvSemester.text = "Semester " + semesterNow.toString()
 
             Glide.with(binding.root.context)
                 .load(imageNow)
