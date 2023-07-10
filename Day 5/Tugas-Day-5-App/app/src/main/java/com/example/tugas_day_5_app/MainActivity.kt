@@ -2,8 +2,16 @@ package com.example.tugas_day_5_app
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.tugas_day_5_app.databinding.ActivityMainBinding
+import com.example.tugas_day_5_app.networking.ApiConfig
+import com.example.tugas_day_5_app.networking.GithubUserApiService
+import com.example.tugas_day_5_app.networking.UserGithubModel
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,15 +23,61 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        setUserList()
+        val client = ApiConfig.getApiService()
+
+        settingRVUsers(client)
+
+//        setUserList()
     }
 
-    private fun setUserList() {
+//    private fun setUserList() {
+//        val rvUserListAdapter = UserListAdapter()
+//
+//        binding.rvUserList.layoutManager = LinearLayoutManager(this)
+//        binding.rvUserList.adapter = rvUserListAdapter
+//
+//        rvUserListAdapter.setUserList(userList)
+//    }
+
+    private fun settingRVUsers(client: GithubUserApiService) {
         val rvUserListAdapter = UserListAdapter()
+        val getListUsersFromClient = client.getListUsers()
 
         binding.rvUserList.layoutManager = LinearLayoutManager(this)
         binding.rvUserList.adapter = rvUserListAdapter
 
-        rvUserListAdapter.setUserList(userList)
+        showLoading(true)
+
+        getListUsersFromClient.enqueue(object : Callback<List<UserGithubModel>> {
+            override fun onResponse(
+                call: Call<List<UserGithubModel>>,
+                response: Response<List<UserGithubModel>>
+            ) {
+                showLoading(false)
+                if (response.isSuccessful) {
+                    val responseBody = response.body()
+                    if (!responseBody.isNullOrEmpty()) {
+                        rvUserListAdapter.addedListOfUsers(responseBody)
+                    }
+                } else {
+                    Log.e("failedGetListUser", "onFailed: ${response.message()}")
+                }
+            }
+
+            override fun onFailure(call: Call<List<UserGithubModel>>, t: Throwable) {
+                showLoading(false)
+                Log.e("failedGetListUser", "onFailed: ${t.message}")
+            }
+
+        })
+    }
+
+
+    private fun showLoading(isShow : Boolean) {
+        if (isShow) {
+            binding.progressBar.visibility = View.VISIBLE
+        } else {
+            binding.progressBar.visibility = View.GONE
+        }
     }
 }

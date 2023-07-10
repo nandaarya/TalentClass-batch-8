@@ -22,15 +22,15 @@ class FollowingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setUserList()
+//        setUserList()
     }
 
-    private fun setUserList() {
-        val rvUserListAdapter = UserListAdapter()
-
-        binding.rvUserList.layoutManager = LinearLayoutManager(requireContext())
-        binding.rvUserList.adapter = rvUserListAdapter
-
-        rvUserListAdapter.setUserList(userList)
-    }
+//    private fun setUserList() {
+//        val rvUserListAdapter = UserListAdapter()
+//
+//        binding.rvUserList.layoutManager = LinearLayoutManager(requireContext())
+//        binding.rvUserList.adapter = rvUserListAdapter
+//
+//        rvUserListAdapter.setUserList(userList)
+//    }
 }

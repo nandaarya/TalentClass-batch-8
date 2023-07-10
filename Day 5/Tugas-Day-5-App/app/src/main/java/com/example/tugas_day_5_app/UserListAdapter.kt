@@ -8,45 +8,42 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.tugas_day_5_app.databinding.ShowItemListBinding
+import com.example.tugas_day_5_app.networking.UserGithubModel
 
 class UserListAdapter : RecyclerView.Adapter<UserListAdapter.UserListViewHolder>() {
 
-    private var userList = ArrayList<UserData>()
+    private var listOfUser = ArrayList<UserGithubModel>()
 
-    fun setUserList(list: List<UserData>) {
-        userList.clear()
-        userList.addAll(list)
+
+    fun addedListOfUsers(list : List<UserGithubModel>) {
+        this.listOfUser.clear()
+        this.listOfUser.addAll(list)
         notifyDataSetChanged()
     }
 
-    inner class UserListViewHolder(private val binding: ShowItemListBinding) :
-        RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(user: UserData) {
-            binding.tvUsername.text = user.username
+    inner class UserListViewHolder(private val binding : ShowItemListBinding) : RecyclerView.ViewHolder(
+        binding.root
+    ) {
+        fun bind(position : Int) {
+            val itemNow = listOfUser[position]
+            binding.tvUsername.text = itemNow.userName
 
-            Glide.with(binding.root.context)
-                .load(user.photoProfile)
-                .apply(RequestOptions().centerCrop())
+            Glide
+                .with(itemView.context)
+                .load(itemNow.avatarURL)
                 .into(binding.ivProfile)
 
             binding.layoutShowItemList.setOnClickListener {
-                Toast.makeText(itemView.context, user.name, Toast.LENGTH_SHORT).show()
-
-                val intent = Intent(itemView.context, DetailUserActivity::class.java)
-                intent.putExtra("photoProfile", user.photoProfile)
-                intent.putExtra("username", user.username)
-                intent.putExtra("name", user.name)
-                intent.putExtra("email", user.email)
-                intent.putExtra("company", user.company)
-//                intent.putExtra("follower", user.follower.toString())
-//                intent.putExtra("following", user.following.toString())
-                itemView.context.startActivity(intent)
+                Toast.makeText(itemView.context, itemNow.userName, Toast.LENGTH_SHORT).show()
             }
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserListViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): UserListViewHolder {
         return UserListViewHolder(
             ShowItemListBinding.inflate(
                 LayoutInflater.from(parent.context),
@@ -57,11 +54,10 @@ class UserListAdapter : RecyclerView.Adapter<UserListAdapter.UserListViewHolder>
     }
 
     override fun getItemCount(): Int {
-        return userList.size
+        return listOfUser.size
     }
 
     override fun onBindViewHolder(holder: UserListViewHolder, position: Int) {
-        val user = userList[position]
-        holder.bind(user)
+        holder.bind(position)
     }
 }
