@@ -72,7 +72,6 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-
     private fun showLoading(isShow : Boolean) {
         if (isShow) {
             binding.progressBar.visibility = View.VISIBLE

@@ -26,12 +26,12 @@ class DetailUserActivity : AppCompatActivity() {
 
         val client = ApiConfig.getApiService()
 
-        setDetailData(client)
+        setDetailUser(client)
 
         setViewPager()
     }
 
-    private fun setDetailData(client: GithubUserApiService) {
+    private fun setDetailUser(client: GithubUserApiService) {
         if(intent.extras != null)
         {
             val username = intent.getStringExtra("username")
