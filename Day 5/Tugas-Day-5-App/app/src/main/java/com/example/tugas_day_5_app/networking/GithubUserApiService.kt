@@ -9,5 +9,5 @@ interface GithubUserApiService {
     fun getListUsers() : Call<List<UserGithubModel>>
 
     @GET("users/{username}")
-    fun getDetailUser(@Path("username") username : String) : Call<UserGithubModel>
+    fun getDetailUser(@Path("username") username : String) : Call<DetailUserGithubModel>
 }

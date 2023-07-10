@@ -34,8 +34,12 @@ class UserListAdapter : RecyclerView.Adapter<UserListAdapter.UserListViewHolder>
                 .load(itemNow.avatarURL)
                 .into(binding.ivProfile)
 
-            binding.layoutShowItemList.setOnClickListener {
+            binding.layoutShowItemList.setOnClickListener{
                 Toast.makeText(itemView.context, itemNow.userName, Toast.LENGTH_SHORT).show()
+
+                val intent = Intent(itemView.context, DetailUserActivity::class.java)
+                intent.putExtra("username", itemNow.userName)
+                itemView.context.startActivity(intent)
             }
         }
     }
