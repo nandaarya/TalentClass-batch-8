@@ -1,12 +1,12 @@
 package com.example.tugas_day_5_app
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
 import com.example.tugas_day_5_app.databinding.ShowItemListBinding
 import com.example.tugas_day_5_app.networking.UserGithubModel
 
@@ -15,6 +15,7 @@ class UserListAdapter : RecyclerView.Adapter<UserListAdapter.UserListViewHolder>
     private var listOfUser = ArrayList<UserGithubModel>()
 
 
+    @SuppressLint("NotifyDataSetChanged")
     fun addedListOfUsers(list : List<UserGithubModel>) {
         this.listOfUser.clear()
         this.listOfUser.addAll(list)
