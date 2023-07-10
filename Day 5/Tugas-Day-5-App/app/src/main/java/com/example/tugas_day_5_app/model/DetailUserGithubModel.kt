@@ -1,4 +1,4 @@
-package com.example.tugas_day_5_app.networking
+package com.example.tugas_day_5_app.model
 
 import com.google.gson.annotations.SerializedName
 

@@ -1,39 +1,40 @@
-package com.example.tugas_day_5_app
+package com.example.tugas_day_5_app.feature_detail
 
 import android.os.Bundle
 import android.util.Log
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.tugas_day_5_app.databinding.FragmentFollowingBinding
-import com.example.tugas_day_5_app.networking.ApiConfig
-import com.example.tugas_day_5_app.networking.GithubUserApiService
-import com.example.tugas_day_5_app.networking.UserGithubModel
+import com.example.tugas_day_5_app.adapter.UserListAdapter
+import com.example.tugas_day_5_app.databinding.FragmentFollowerBinding
+import com.example.tugas_day_5_app.api.ApiConfig
+import com.example.tugas_day_5_app.api.GithubUserApiService
+import com.example.tugas_day_5_app.model.UserGithubModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class FollowingFragment : Fragment() {
+class FollowerFragment : Fragment() {
 
-    private lateinit var binding: FragmentFollowingBinding
+    private lateinit var binding: FragmentFollowerBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentFollowingBinding.inflate(inflater, container, false)
+        binding = FragmentFollowerBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val client = ApiConfig.getApiService()
-        setUserFollowingList(client)
+        setUserFollowerList(client)
     }
 
-    private fun setUserFollowingList(client: GithubUserApiService) {
+    private fun setUserFollowerList(client: GithubUserApiService) {
         val intent = activity?.intent
         val rvUserListAdapter = UserListAdapter()
 
@@ -44,7 +45,7 @@ class FollowingFragment : Fragment() {
 
         if (intent?.extras != null) {
             val username = intent.getStringExtra("username")
-            val getUserFollowerListFromClient = client.getUserFollowingList(username!!)
+            val getUserFollowerListFromClient = client.getUserFollowersList(username!!)
 
             getUserFollowerListFromClient.enqueue(object : Callback<List<UserGithubModel>> {
                 override fun onResponse(

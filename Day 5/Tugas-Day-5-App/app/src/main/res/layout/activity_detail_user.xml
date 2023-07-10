@@ -7,7 +7,7 @@
     android:layout_margin="24dp"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".DetailUserActivity">
+    tools:context=".feature_detail.DetailUserActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -28,8 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_margin="16dp">
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/iv_profile"

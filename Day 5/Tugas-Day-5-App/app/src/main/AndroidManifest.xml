@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DetailUserActivity"
+            android:name=".feature_detail.DetailUserActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

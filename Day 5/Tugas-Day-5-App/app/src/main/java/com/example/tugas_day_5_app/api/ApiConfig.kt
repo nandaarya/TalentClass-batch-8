@@ -1,6 +1,6 @@
-package com.example.tugas_day_5_app.networking
+package com.example.tugas_day_5_app.api
 
-import com.example.tugas_day_5_app.Constant
+import com.example.tugas_day_5_app.util.Constant
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

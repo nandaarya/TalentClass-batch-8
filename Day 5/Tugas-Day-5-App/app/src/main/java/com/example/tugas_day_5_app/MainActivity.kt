@@ -5,10 +5,11 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.tugas_day_5_app.adapter.UserListAdapter
 import com.example.tugas_day_5_app.databinding.ActivityMainBinding
-import com.example.tugas_day_5_app.networking.ApiConfig
-import com.example.tugas_day_5_app.networking.GithubUserApiService
-import com.example.tugas_day_5_app.networking.UserGithubModel
+import com.example.tugas_day_5_app.api.ApiConfig
+import com.example.tugas_day_5_app.api.GithubUserApiService
+import com.example.tugas_day_5_app.model.UserGithubModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

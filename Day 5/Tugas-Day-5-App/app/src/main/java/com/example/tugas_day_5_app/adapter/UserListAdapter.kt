@@ -1,4 +1,4 @@
-package com.example.tugas_day_5_app
+package com.example.tugas_day_5_app.adapter
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -8,7 +8,8 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.tugas_day_5_app.databinding.ShowItemListBinding
-import com.example.tugas_day_5_app.networking.UserGithubModel
+import com.example.tugas_day_5_app.feature_detail.DetailUserActivity
+import com.example.tugas_day_5_app.model.UserGithubModel
 
 class UserListAdapter : RecyclerView.Adapter<UserListAdapter.UserListViewHolder>() {
 

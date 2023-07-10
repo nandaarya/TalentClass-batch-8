@@ -1,4 +1,4 @@
-package com.example.tugas_day_5_app
+package com.example.tugas_day_5_app.feature_detail
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,10 +6,11 @@ import android.view.View
 import android.util.Log
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.example.tugas_day_5_app.adapter.ViewPagerAdapter
 import com.example.tugas_day_5_app.databinding.ActivityDetailUserBinding
-import com.example.tugas_day_5_app.networking.ApiConfig
-import com.example.tugas_day_5_app.networking.DetailUserGithubModel
-import com.example.tugas_day_5_app.networking.GithubUserApiService
+import com.example.tugas_day_5_app.api.ApiConfig
+import com.example.tugas_day_5_app.model.DetailUserGithubModel
+import com.example.tugas_day_5_app.api.GithubUserApiService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
