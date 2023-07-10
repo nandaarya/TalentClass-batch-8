@@ -26,18 +26,7 @@ class MainActivity : AppCompatActivity() {
         val client = ApiConfig.getApiService()
 
         settingRVUsers(client)
-
-//        setUserList()
     }
-
-//    private fun setUserList() {
-//        val rvUserListAdapter = UserListAdapter()
-//
-//        binding.rvUserList.layoutManager = LinearLayoutManager(this)
-//        binding.rvUserList.adapter = rvUserListAdapter
-//
-//        rvUserListAdapter.setUserList(userList)
-//    }
 
     private fun settingRVUsers(client: GithubUserApiService) {
         val rvUserListAdapter = UserListAdapter()
@@ -72,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    private fun showLoading(isShow : Boolean) {
+    private fun showLoading(isShow: Boolean) {
         if (isShow) {
             binding.progressBar.visibility = View.VISIBLE
         } else {

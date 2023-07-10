@@ -9,7 +9,7 @@ import com.example.tugas_day_5_app.databinding.ActivitySplashScreenBinding
 @SuppressLint("CustomSplashScreen")
 class SplashScreen : AppCompatActivity() {
 
-    private lateinit var binding : ActivitySplashScreenBinding
+    private lateinit var binding: ActivitySplashScreenBinding
     private val splashTimeOut: Long = 2000
 
     override fun onCreate(savedInstanceState: Bundle?) {

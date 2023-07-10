@@ -32,8 +32,7 @@ class DetailUserActivity : AppCompatActivity() {
     }
 
     private fun setDetailUser(client: GithubUserApiService) {
-        if(intent.extras != null)
-        {
+        if (intent.extras != null) {
             val username = intent.getStringExtra("username")
             val getUserDetailFromClient = client.getDetailUser(username!!)
 
@@ -70,27 +69,17 @@ class DetailUserActivity : AppCompatActivity() {
                 }
 
             })
-
-//            binding.tvUsername.text = intent.getStringExtra("username")
-//            binding.tvName.text = intent.getStringExtra("name")
-//            binding.tvEmail.text = intent.getStringExtra("email")
-//            binding.tvCompany.text = intent.getStringExtra("company")
-//
-//            Glide.with(binding.root.context)
-//                .load(intent.getStringExtra("photoProfile"))
-//                .apply(RequestOptions().centerCrop())
-//                .into(binding.ivProfile)
         }
     }
 
-    private  fun setViewPager() {
+    private fun setViewPager() {
         val viewPagerAdapter = ViewPagerAdapter(supportFragmentManager)
         binding.viewPager.adapter = viewPagerAdapter
 
         binding.tabLayout.setupWithViewPager(binding.viewPager)
     }
 
-    private fun showLoading(isShow : Boolean) {
+    private fun showLoading(isShow: Boolean) {
         if (isShow) {
             binding.progressBar.visibility = View.VISIBLE
         } else {

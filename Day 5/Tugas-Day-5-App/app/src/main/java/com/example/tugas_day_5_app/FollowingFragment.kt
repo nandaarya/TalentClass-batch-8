@@ -42,7 +42,7 @@ class FollowingFragment : Fragment() {
 
         showLoading(true)
 
-        if(intent?.extras != null) {
+        if (intent?.extras != null) {
             val username = intent.getStringExtra("username")
             val getUserFollowerListFromClient = client.getUserFollowingList(username!!)
 
@@ -71,7 +71,7 @@ class FollowingFragment : Fragment() {
         }
     }
 
-    private fun showLoading(isShow : Boolean) {
+    private fun showLoading(isShow: Boolean) {
         if (isShow) {
             binding.progressBar.visibility = View.VISIBLE
         } else {

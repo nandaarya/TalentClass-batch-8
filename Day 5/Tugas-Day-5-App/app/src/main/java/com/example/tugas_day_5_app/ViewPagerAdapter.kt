@@ -6,9 +6,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 
-class ViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+class ViewPagerAdapter(fm: FragmentManager) :
+    FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
-    private val fragmentList = arrayListOf(FollowerFragment(),FollowingFragment())
+    private val fragmentList = arrayListOf(FollowerFragment(), FollowingFragment())
     private val titleList = arrayListOf("Follower", "Following")
 
     override fun getItem(position: Int): Fragment {

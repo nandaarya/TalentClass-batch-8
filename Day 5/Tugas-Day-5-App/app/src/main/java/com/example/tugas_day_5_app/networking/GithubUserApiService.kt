@@ -6,14 +6,14 @@ import retrofit2.http.Path
 
 interface GithubUserApiService {
     @GET("users")
-    fun getListUsers() : Call<List<UserGithubModel>>
+    fun getListUsers(): Call<List<UserGithubModel>>
 
     @GET("users/{username}")
-    fun getDetailUser(@Path("username") username : String) : Call<DetailUserGithubModel>
+    fun getDetailUser(@Path("username") username: String): Call<DetailUserGithubModel>
 
     @GET("users/{username}/followers")
-    fun getUserFollowersList(@Path("username") username : String) : Call<List<UserGithubModel>>
+    fun getUserFollowersList(@Path("username") username: String): Call<List<UserGithubModel>>
 
     @GET("users/{username}/following")
-    fun getUserFollowingList(@Path("username") username : String) : Call<List<UserGithubModel>>
+    fun getUserFollowingList(@Path("username") username: String): Call<List<UserGithubModel>>
 }

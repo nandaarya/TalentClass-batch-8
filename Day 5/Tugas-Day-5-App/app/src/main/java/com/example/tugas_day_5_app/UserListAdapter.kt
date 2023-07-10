@@ -16,17 +16,18 @@ class UserListAdapter : RecyclerView.Adapter<UserListAdapter.UserListViewHolder>
 
 
     @SuppressLint("NotifyDataSetChanged")
-    fun addedListOfUsers(list : List<UserGithubModel>) {
+    fun addedListOfUsers(list: List<UserGithubModel>) {
         this.listOfUser.clear()
         this.listOfUser.addAll(list)
         notifyDataSetChanged()
     }
 
 
-    inner class UserListViewHolder(private val binding : ShowItemListBinding) : RecyclerView.ViewHolder(
-        binding.root
-    ) {
-        fun bind(position : Int) {
+    inner class UserListViewHolder(private val binding: ShowItemListBinding) :
+        RecyclerView.ViewHolder(
+            binding.root
+        ) {
+        fun bind(position: Int) {
             val itemNow = listOfUser[position]
             binding.tvUsername.text = itemNow.userName
 
@@ -35,7 +36,7 @@ class UserListAdapter : RecyclerView.Adapter<UserListAdapter.UserListViewHolder>
                 .load(itemNow.avatarURL)
                 .into(binding.ivProfile)
 
-            binding.layoutShowItemList.setOnClickListener{
+            binding.layoutShowItemList.setOnClickListener {
                 Toast.makeText(itemView.context, itemNow.userName, Toast.LENGTH_SHORT).show()
 
                 val intent = Intent(itemView.context, DetailUserActivity::class.java)
