@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "22185578848",
+    "project_id": "tugas-day-6-app",
+    "storage_bucket": "tugas-day-6-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22185578848:android:1890e88aa59c291249ce05",
+        "android_client_info": {
+          "package_name": "com.example.tugas_day_6_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "22185578848-odmdbvvhpt5ojnjuj4uf7p1havt11njd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVGAa1ksImGO0eQgwEQ234oEuYiJQgrnM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "22185578848-odmdbvvhpt5ojnjuj4uf7p1havt11njd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

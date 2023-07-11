@@ -1,9 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="24dp"
     tools:context=".EditDetailBookActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Data Buku"
+        android:layout_margin="24dp"
+        android:gravity="center"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/tv_book_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Judul Buku"
+        android:textSize="22sp"/>
+
+    <EditText
+        android:id="@+id/et_book_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Judul Buku"
+        android:maxLength="50"
+        android:maxLines="1"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_author_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama Penulis"
+        android:textSize="22sp"/>
+
+    <EditText
+        android:id="@+id/et_author_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Nama Penulis"
+        android:maxLength="50"
+        android:maxLines="1"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tv_publication_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tahun Terbit"
+        android:textSize="22sp"/>
+
+    <EditText
+        android:id="@+id/et_publication_year"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Tahun Terbit"
+        android:maxLength="50"
+        android:maxLines="1"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tv_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kategori"
+        android:textSize="22sp"/>
+
+    <EditText
+        android:id="@+id/et_category"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Kategori Buku"
+        android:maxLength="50"
+        android:maxLines="1"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tv_book_cover_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="URL Cover Buku"
+        android:textSize="22sp"/>
+
+    <EditText
+        android:id="@+id/et_book_cover_url"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan URL Cover Buku"
+        android:maxLength="50"
+        android:maxLines="1"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/btn_edit_book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ubah Data" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
