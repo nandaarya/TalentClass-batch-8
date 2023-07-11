@@ -15,12 +15,6 @@
         android:text="Data Buku"
         android:textSize="28sp" />
 
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center" />
-
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/layout_show_item_list"
         android:layout_width="match_parent"

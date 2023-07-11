@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setFAB() {
-        binding.fabAddBook.setOnClickListener{
+        binding.fabAddBook.setOnClickListener {
             val intent = Intent(this, AddBookActivity::class.java)
             startActivity(intent)
         }
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun readDataFromFirebaseRealtimeDB() {
-        showLoading(false)
+        showLoading(true)
 
         val bookList = mutableListOf<BookFirebaseRealtimeDBModel>()
 
@@ -54,10 +54,17 @@ class MainActivity : AppCompatActivity() {
                     val category = snapshot.child("category").value.toString()
                     val bookCoverURL = snapshot.child("bookCoverURL").value.toString()
 
-                    val book = BookFirebaseRealtimeDBModel(bookTitle, authorName, publicationYear, category, bookCoverURL)
+                    val book = BookFirebaseRealtimeDBModel(
+                        bookTitle,
+                        authorName,
+                        publicationYear,
+                        category,
+                        bookCoverURL
+                    )
 
                     bookList.add(book)
                 }
+                showLoading(false)
                 settingRVBooks(bookList)
             }
 
@@ -68,7 +75,7 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    private fun settingRVBooks(book : List<BookFirebaseRealtimeDBModel>) {
+    private fun settingRVBooks(book: List<BookFirebaseRealtimeDBModel>) {
         val rvBookListAdapter = BookListAdapter()
 
         binding.rvBookList.layoutManager = LinearLayoutManager(this)
