@@ -14,6 +14,10 @@ class DetailBookActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailBookBinding
     private lateinit var database: DatabaseReference
     private lateinit var bookTitle: String
+    private lateinit var authorName: String
+    private lateinit var publicationYear: String
+    private lateinit var category: String
+    private lateinit var bookCoverURL: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,13 +30,13 @@ class DetailBookActivity : AppCompatActivity() {
         setButton()
     }
 
-    private fun setData(): String {
+    private fun setData() {
         if (intent.extras != null) {
             bookTitle = intent.getStringExtra("bookTitle")!!
-            val authorName = intent.getStringExtra("authorName")
-            val publicationYear = intent.getStringExtra("publicationYear")
-            val category = intent.getStringExtra("category")
-            val bookCoverURL = intent.getStringExtra("bookCoverURL")
+            authorName = intent.getStringExtra("authorName")!!
+            publicationYear = intent.getStringExtra("publicationYear")!!
+            category = intent.getStringExtra("category")!!
+            bookCoverURL = intent.getStringExtra("bookCoverURL")!!
 
             binding.tvBookTitle.text = bookTitle
             binding.tvAuthorName.text = authorName
@@ -44,13 +48,16 @@ class DetailBookActivity : AppCompatActivity() {
                 .load(bookCoverURL)
                 .into(binding.ivBookCover)
         }
-        return bookTitle
     }
 
     private fun setButton() {
         binding.btnDeleteBook.setOnClickListener {
             deleteDataFromFirebaseRealtimeDB()
             intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnEditBook.setOnClickListener{
+            intent = Intent(this, EditDetailBookActivity::class.java)
             startActivity(intent)
         }
     }

@@ -44,29 +44,62 @@ class AddBookActivity : AppCompatActivity() {
             val category = etCategory.text.toString()
             val bookCoverURL = etBookCoverUrl.text.toString()
 
-            val book = BookFirebaseRealtimeDBModel(
-                bookTitle,
-                authorName,
-                publicationYear,
-                category,
-                bookCoverURL
-            )
-
-            database.child(bookTitle).setValue(book).addOnSuccessListener {
-                etBookTitle.text.clear()
-                etAuthorName.text.clear()
-                etPublicationYear.text.clear()
-                etCategory.text.clear()
-                etBookCoverUrl.text.clear()
-
-                Toast.makeText(this@AddBookActivity, "Data berhasil disimpan!", Toast.LENGTH_SHORT).show()
+            if (bookTitle.isEmpty()) {
+                binding.etBookTitle.error = "Judul Buku tidak boleh kosong"
             }
-                .addOnCanceledListener {
-                    Toast.makeText(this@AddBookActivity, "Batal disimpan!", Toast.LENGTH_SHORT).show()
+
+            if (authorName.isEmpty()) {
+                binding.etAuthorName.error = "Nama Penulis tidak boleh kosong"
+            }
+
+            if (publicationYear.isEmpty()) {
+                binding.etPublicationYear.error = "Tahun terbit tidak boleh kosong"
+            }
+
+            if (category.isEmpty()) {
+                binding.etCategory.error = "Kategori tidak boleh kosong"
+            }
+
+            if (bookCoverURL.isEmpty()) {
+                binding.etBookCoverUrl.error = "URL Cover Buku tidak boleh kosong"
+            }
+
+            if (bookTitle.isNotEmpty() && authorName.isNotEmpty() && publicationYear.isNotEmpty() && category.isNotEmpty() && bookCoverURL.isNotEmpty()) {
+                val book = BookFirebaseRealtimeDBModel(
+                    bookTitle,
+                    authorName,
+                    publicationYear,
+                    category,
+                    bookCoverURL
+                )
+
+                database.child(bookTitle).setValue(book).addOnSuccessListener {
+                    etBookTitle.text.clear()
+                    etAuthorName.text.clear()
+                    etPublicationYear.text.clear()
+                    etCategory.text.clear()
+                    etBookCoverUrl.text.clear()
+
+                    Toast.makeText(
+                        this@AddBookActivity,
+                        "Data berhasil disimpan!",
+                        Toast.LENGTH_SHORT
+                    )
+                        .show()
                 }
-                .addOnFailureListener {
-                    Toast.makeText(this@AddBookActivity, "Data Gagal disimpan!", Toast.LENGTH_SHORT).show()
-                }
+                    .addOnCanceledListener {
+                        Toast.makeText(this@AddBookActivity, "Batal disimpan!", Toast.LENGTH_SHORT)
+                            .show()
+                    }
+                    .addOnFailureListener {
+                        Toast.makeText(
+                            this@AddBookActivity,
+                            "Data Gagal disimpan!",
+                            Toast.LENGTH_SHORT
+                        )
+                            .show()
+                    }
+            }
 
         }
     }
