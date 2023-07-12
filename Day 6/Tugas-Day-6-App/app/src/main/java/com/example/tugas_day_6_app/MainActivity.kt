@@ -1,14 +1,15 @@
 package com.example.tugas_day_6_app
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.tugas_day_6_app.databinding.ActivityMainBinding
 import com.example.tugas_day_6_app.model.BookFirebaseRealtimeDBModel
 import com.google.firebase.database.*
+import com.kennyc.view.MultiStateView
 
 class MainActivity : AppCompatActivity() {
 
@@ -40,7 +41,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun readDataFromFirebaseRealtimeDB() {
-        showLoading(true)
 
         val bookList = mutableListOf<BookFirebaseRealtimeDBModel>()
 
@@ -64,7 +64,6 @@ class MainActivity : AppCompatActivity() {
 
                     bookList.add(book)
                 }
-                showLoading(false)
                 settingRVBooks(bookList)
             }
 
@@ -81,14 +80,11 @@ class MainActivity : AppCompatActivity() {
         binding.rvBookList.layoutManager = LinearLayoutManager(this)
         binding.rvBookList.adapter = rvBookListAdapter
 
-        rvBookListAdapter.addedListOfBooks(book)
-    }
-
-    private fun showLoading(isShow: Boolean) {
-        if (isShow) {
-            binding.progressBar.visibility = View.VISIBLE
+        if (book.isNotEmpty()) {
+            rvBookListAdapter.addedListOfBooks(book)
+            binding.msvBookList.viewState = MultiStateView.ViewState.CONTENT
         } else {
-            binding.progressBar.visibility = View.GONE
+            binding.msvBookList.viewState = MultiStateView.ViewState.EMPTY
         }
     }
 }
