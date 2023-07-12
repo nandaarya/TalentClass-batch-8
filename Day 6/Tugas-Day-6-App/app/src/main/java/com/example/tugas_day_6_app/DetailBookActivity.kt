@@ -3,6 +3,7 @@ package com.example.tugas_day_6_app
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.tugas_day_6_app.databinding.ActivityDetailBookBinding
@@ -52,9 +53,7 @@ class DetailBookActivity : AppCompatActivity() {
 
     private fun setButton() {
         binding.btnDeleteBook.setOnClickListener {
-            deleteDataFromFirebaseRealtimeDB()
-            intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            showDeleteConfirmationDialog()
         }
         binding.btnEditBook.setOnClickListener{
             intent = Intent(this, EditDetailBookActivity::class.java)
@@ -82,6 +81,18 @@ class DetailBookActivity : AppCompatActivity() {
             .addOnFailureListener {
                 Toast.makeText(this@DetailBookActivity, "Gagal menghapus data!", Toast.LENGTH_SHORT).show()
             }
+        intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 
+    private fun showDeleteConfirmationDialog() {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Konfirmasi")
+            .setMessage("Anda yakin ingin menghapus data ini?")
+            .setPositiveButton("Ya") { _, _ ->
+                deleteDataFromFirebaseRealtimeDB()
+            }
+            .setNegativeButton("Tidak", null)
+            .show()
+    }
 }
