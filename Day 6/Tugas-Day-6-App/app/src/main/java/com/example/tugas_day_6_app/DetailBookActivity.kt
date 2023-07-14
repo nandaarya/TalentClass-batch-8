@@ -26,6 +26,8 @@ class DetailBookActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        supportActionBar?.title = "Detail Buku"
+
         settingFirebaseRealtimeDB()
         setData()
         setButton()
@@ -39,10 +41,10 @@ class DetailBookActivity : AppCompatActivity() {
             category = intent.getStringExtra("category")!!
             bookCoverURL = intent.getStringExtra("bookCoverURL")!!
 
-            binding.tvBookTitle.text = bookTitle
-            binding.tvAuthorName.text = authorName
-            binding.tvPublicationYear.text = publicationYear
-            binding.tvCategory.text = category
+            binding.tvBookTitle.text = "Judul Buku: " + bookTitle
+            binding.tvAuthorName.text = "Nama Penulis: " + authorName
+            binding.tvPublicationYear.text = "Tahun Terbit: " + publicationYear
+            binding.tvCategory.text = "Kategori: " + category
 
             Glide
                 .with(this)
