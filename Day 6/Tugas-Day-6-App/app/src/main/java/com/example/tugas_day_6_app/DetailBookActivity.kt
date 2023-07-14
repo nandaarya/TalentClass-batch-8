@@ -28,9 +28,17 @@ class DetailBookActivity : AppCompatActivity() {
 
         supportActionBar?.title = "Detail Buku"
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         settingFirebaseRealtimeDB()
         setData()
         setButton()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        // Tindakan ketika tombol kembali ditekan
+        onBackPressed()
+        return true
     }
 
     private fun setData() {
@@ -41,10 +49,10 @@ class DetailBookActivity : AppCompatActivity() {
             category = intent.getStringExtra("category")!!
             bookCoverURL = intent.getStringExtra("bookCoverURL")!!
 
-            binding.tvBookTitle.text = "Judul Buku: " + bookTitle
-            binding.tvAuthorName.text = "Nama Penulis: " + authorName
-            binding.tvPublicationYear.text = "Tahun Terbit: " + publicationYear
-            binding.tvCategory.text = "Kategori: " + category
+            binding.tvBookTitle.text = "Judul Buku: $bookTitle"
+            binding.tvAuthorName.text = "Nama Penulis: $authorName"
+            binding.tvPublicationYear.text = "Tahun Terbit: $publicationYear"
+            binding.tvCategory.text = "Kategori: $category"
 
             Glide
                 .with(this)
