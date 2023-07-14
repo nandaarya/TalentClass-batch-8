@@ -27,7 +27,6 @@ class DetailBookActivity : AppCompatActivity() {
         setContentView(view)
 
         supportActionBar?.title = "Detail Buku"
-
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         settingFirebaseRealtimeDB()

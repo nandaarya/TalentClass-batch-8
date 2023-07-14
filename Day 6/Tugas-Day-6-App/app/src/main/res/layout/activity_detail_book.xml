@@ -83,7 +83,7 @@
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
             android:backgroundTint="@color/orange"
-            android:text="Edit Data" />
+            android:text="Ubah Data" />
 
         <Button
             android:id="@+id/btn_delete_book"

@@ -19,9 +19,18 @@ class AddBookActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        supportActionBar?.title = "Tambah Buku"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         settingFirebaseRealtimeDB()
 
         settingSaveButton()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        // Tindakan ketika tombol kembali ditekan
+        onBackPressed()
+        return true
     }
 
     private fun settingFirebaseRealtimeDB() {

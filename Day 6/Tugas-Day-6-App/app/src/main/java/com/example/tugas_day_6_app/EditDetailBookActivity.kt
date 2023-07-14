@@ -21,9 +21,18 @@ class EditDetailBookActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        supportActionBar?.title = "Ubah Data Buku"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         setData()
         settingFirebaseRealtimeDB()
         settingEditButton()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        // Tindakan ketika tombol kembali ditekan
+        onBackPressed()
+        return true
     }
 
     private fun setData() {
