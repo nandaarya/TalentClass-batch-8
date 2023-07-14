@@ -2,6 +2,7 @@ package com.example.tugas_day_6_app
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -45,6 +46,8 @@ class MainActivity : AppCompatActivity() {
 
         val bookList = mutableListOf<BookFirebaseRealtimeDBModel>()
 
+        showLoading(true)
+
         database.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 bookList.clear()
@@ -81,11 +84,21 @@ class MainActivity : AppCompatActivity() {
         binding.rvBookList.layoutManager = LinearLayoutManager(this)
         binding.rvBookList.adapter = rvBookListAdapter
 
+        showLoading(false)
+
         if (book.isNotEmpty()) {
             rvBookListAdapter.addedListOfBooks(book)
             binding.msvBookList.viewState = MultiStateView.ViewState.CONTENT
         } else {
             binding.msvBookList.viewState = MultiStateView.ViewState.EMPTY
+        }
+    }
+
+    private fun showLoading(isShow: Boolean) {
+        if (isShow) {
+            binding.progressBar.visibility = View.VISIBLE
+        } else {
+            binding.progressBar.visibility = View.GONE
         }
     }
 }
