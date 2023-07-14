@@ -30,6 +30,7 @@ class BookListAdapter : RecyclerView.Adapter<BookListAdapter.BookListViewHolder>
             Glide
                 .with(itemView.context)
                 .load(itemNow.bookCoverURL)
+                .fitCenter()
                 .into(binding.ivBookCoverUrl)
 
             binding.layoutShowItemList.setOnClickListener {

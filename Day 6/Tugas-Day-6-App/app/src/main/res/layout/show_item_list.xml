@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:background="@color/purple_500"
+    android:padding="8dp"
+    android:background="@color/secondary"
     android:layout_margin="16dp">
 
     <ImageView
@@ -27,7 +28,7 @@
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:text="Book Title" />
 
         <TextView
@@ -37,7 +38,7 @@
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:text="Author Name" />
     </LinearLayout>
 

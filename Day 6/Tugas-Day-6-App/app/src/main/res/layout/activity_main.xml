@@ -17,7 +17,7 @@
         android:textColor="@color/black"
         android:gravity="center"
         android:text="Penyimpanan Data Buku"
-        android:textSize="28sp" />
+        android:textSize="20sp" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
