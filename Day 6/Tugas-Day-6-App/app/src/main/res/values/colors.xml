@@ -9,6 +9,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="orange">#FFC107</color>
     <color name="red">#DD2E2E</color>
-    <color name="primary">#3AA6B9</color>
+    <color name="primary">#FFFFFFFF</color>
+    <color name="button">#010c80</color>
+    <color name="gray">#808080</color>
+    <color name="primary_old">#3AA6B9</color>
     <color name="secondary">#C1ECE4</color>
 </resources>
