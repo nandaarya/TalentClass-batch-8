@@ -9,3 +9,11 @@ Repository file-file kelas junior mobile programmer
 4. Membuat Aplikasi dengan Splashscreen, 2 Tab (dibuat dengan tab layout dan view pager) yang berisi daftar pengguna (dibuat dengan recycler view), dan Detail data -> Day 4/Tugas-Day-4-App & Day 4/app-debug.apk
 5. Membuat Aplikasi github user list -> Tugas-Day-5-App 
 6. (TUGAS AKHIR) Membuat Aplikasi Penyimpanan Data Buku -> Tugas-Day-6-App & Day 6/app-debug.apk
+
+### Show Case Tugas Akhir
+Mobile application for store book's data. Build with kotlin and firebase realtime database
+SS1
+SS2
+SS3
+SS4
+SS5
