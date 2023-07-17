@@ -13,6 +13,6 @@ Repository file-file kelas junior mobile programmer
 ### Show Case Tugas Akhir
 Mobile application for store book's data. Build with kotlin and firebase realtime database
 
-![Splashscreen](README-Screenshot/Splashscreen.jpg) ![Homescreen](README-Screenshot/HomeScreen.jpg) ![DetailScreen](README-Screenshot/DetailScreen.jpg)
+| ![Splashscreen](README-Screenshot/Splashscreen.jpg) | ![Homescreen](README-Screenshot/HomeScreen.jpg) | ![DetailScreen](README-Screenshot/DetailScreen.jpg) |
 SS4
 SS5
