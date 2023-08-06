@@ -17,6 +17,6 @@ Mobile application for store book's data. Build with kotlin and firebase realtim
 
 ### Graduation
 
-<img src="MobileProgram.jpg" alt="Best participant certification"/>
+<img src="MobileProgram.png" alt="Best participant certification"/>
 
-<img src="NandaAryaPutra.jpg" alt="Graduation certification"/>
+<img src="NandaAryaPutra.png" alt="Graduation certification"/>
