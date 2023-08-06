@@ -17,6 +17,8 @@ Mobile application for store book's data. Build with kotlin and firebase realtim
 
 ### Graduation
 
+I managed to be the best participant in the class
 <img src="MobileProgram.png" alt="Best participant certification"/>
 
+I passed with a score of 95 out of 100
 <img src="NandaAryaPutra.png" alt="Graduation certification"/>
