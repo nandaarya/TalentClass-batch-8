@@ -14,3 +14,9 @@ Repository file-file kelas junior mobile programmer
 Mobile application for store book's data. Build with kotlin and firebase realtime database
 
 <img src="README-Screenshot/Splashscreen.jpg" alt="Splashscreen" width="200px" /> <img src="README-Screenshot/HomeScreen.jpg" alt="Homescreen" width="200px" /> <img src="README-Screenshot/DetailScreen.jpg" alt="DetailScreen" width="200px" /> <img src="README-Screenshot/AddBookScreen.jpg" alt="AddBookScreen" width="200px" /> <img src="README-Screenshot/ChangeDataScreen.jpg" alt="ChangeDataScreen" width="200px" />
+
+### Graduation
+
+<img src="MobileProgram.jpg" alt="Best participant certification"/>
+
+<img src="NandaAryaPutra.jpg" alt="Graduation certification"/>
