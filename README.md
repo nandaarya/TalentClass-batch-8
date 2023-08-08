@@ -1,6 +1,6 @@
 # TalentClass-batch-8
 
-Repository file-file kelas junior mobile programmer
+Repository file-file kelas junior mobile programmer<br>
 All junior mobile programmer class projects
 
 ## Tugas-tugas
