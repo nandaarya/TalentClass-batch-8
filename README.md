@@ -1,6 +1,7 @@
 # TalentClass-batch-8
 
 Repository file-file kelas junior mobile programmer
+All junior mobile programmer class projects
 
 ## Tugas-tugas
 1. Membuat Kode/Program Deteksi Palindrom -> Day 1/palindrom.kt
