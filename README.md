@@ -1,6 +1,7 @@
 # TalentClass-batch-8
 
-Repository file-file kelas junior mobile programmer
+Repository file-file kelas junior mobile programmer<br>
+All junior mobile programmer class projects
 
 ## Tugas-tugas
 1. Membuat Kode/Program Deteksi Palindrom -> Day 1/palindrom.kt
@@ -14,3 +15,11 @@ Repository file-file kelas junior mobile programmer
 Mobile application for store book's data. Build with kotlin and firebase realtime database
 
 <img src="README-Screenshot/Splashscreen.jpg" alt="Splashscreen" width="200px" /> <img src="README-Screenshot/HomeScreen.jpg" alt="Homescreen" width="200px" /> <img src="README-Screenshot/DetailScreen.jpg" alt="DetailScreen" width="200px" /> <img src="README-Screenshot/AddBookScreen.jpg" alt="AddBookScreen" width="200px" /> <img src="README-Screenshot/ChangeDataScreen.jpg" alt="ChangeDataScreen" width="200px" />
+
+# Graduation
+
+I managed to be the best participant in the Junior Mobile Programmer Class
+<img src="MobileProgram.png" alt="Best participant certification"/>
+
+I passed with a score of 95 out of 100
+<img src="NandaAryaPutra.png" alt="Graduation certification"/>
