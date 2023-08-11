@@ -31,6 +31,7 @@ class EditDetailBookActivity : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {
         // Tindakan ketika tombol kembali ditekan
+        @Suppress("DEPRECATION")
         onBackPressed()
         return true
     }
