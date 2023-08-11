@@ -1,5 +1,6 @@
 package com.example.tugas_day_6_app
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -12,6 +13,7 @@ class BookListAdapter : RecyclerView.Adapter<BookListAdapter.BookListViewHolder>
 
     private var listOfBook = ArrayList<BookFirebaseRealtimeDBModel>()
 
+    @SuppressLint("NotifyDataSetChanged")
     fun addedListOfBooks(list: List<BookFirebaseRealtimeDBModel>) {
         this.listOfBook.clear()
         this.listOfBook.addAll(list)
