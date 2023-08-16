@@ -16,7 +16,7 @@
         android:layout_margin="24dp"
         android:textColor="@color/black"
         android:gravity="center"
-        android:text="Penyimpanan Data Buku"
+        android:text="@string/penyimpanan_data_buku"
         android:textSize="20sp" />
 
     <ProgressBar
