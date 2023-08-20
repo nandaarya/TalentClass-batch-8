@@ -16,7 +16,6 @@ Mobile application for store book's data. Build with kotlin and firebase realtim
 <img src="README-Screenshot/Splashscreen.jpg" alt="Splashscreen" width="200px" /> <img src="README-Screenshot/HomeScreen.jpg" alt="Homescreen" width="200px" /> <img src="README-Screenshot/DetailScreen.jpg" alt="DetailScreen" width="200px" /> <img src="README-Screenshot/AddBookScreen.jpg" alt="AddBookScreen" width="200px" /> <img src="README-Screenshot/ChangeDataScreen.jpg" alt="ChangeDataScreen" width="200px" />
 
 # Graduation
-
 I managed to be the best participant in the Junior Mobile Programmer Class
 <img src="MobileProgram.png" alt="Best participant certification"/>
 
