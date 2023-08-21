@@ -11,4 +11,6 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="penyimpanan_data_buku">Penyimpanan Data Buku</string>
     <string name="add_book">Add Book</string>
+    <string name="ubah_data_buku">Ubah Data Buku</string>
+    <string name="judul_buku">Judul Buku</string>
 </resources>
