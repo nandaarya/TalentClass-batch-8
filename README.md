@@ -1,6 +1,6 @@
 # TalentClass-batch-8
 
-All junior mobile programmer class projects
+All junior mobile programmer class projects using Android Native Kotlin
 
 ## Tugas-tugas
 1. Membuat Kode/Program Deteksi Palindrom -> Day 1/palindrom.kt

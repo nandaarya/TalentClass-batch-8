@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/primary"
+    android:orientation="vertical"
     android:padding="24dp"
     tools:context=".AddBookActivity">
 
@@ -13,11 +13,11 @@
         android:id="@+id/tv_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Masukkan Data Buku Baru"
-        android:textColor="@color/black"
-        android:padding="8dp"
         android:layout_marginBottom="24dp"
         android:gravity="center"
+        android:padding="8dp"
+        android:text="Masukkan Data Buku Baru"
+        android:textColor="@color/black"
         android:textSize="22sp" />
 
     <TextView
@@ -26,20 +26,20 @@
         android:layout_height="wrap_content"
         android:text="Judul Buku"
         android:textColor="@color/black"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/et_book_title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:hint="Masukkan Judul Buku"
-        android:textColorHint="@color/gray"
-        android:textColor="@color/black"
+        android:inputType="textMultiLine"
         android:maxLength="50"
         android:maxLines="1"
-        android:inputType="textMultiLine"
         android:minHeight="48dp"
-        android:layout_marginBottom="16dp"/>
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray" />
 
     <TextView
         android:id="@+id/tv_author_name"
@@ -47,19 +47,19 @@
         android:layout_height="wrap_content"
         android:text="Nama Penulis"
         android:textColor="@color/black"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/et_author_name"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:hint="Masukkan Nama Penulis"
-        android:textColorHint="@color/gray"
-        android:textColor="@color/black"
-        android:maxLines="1"
         android:inputType="textMultiLine"
+        android:maxLines="1"
         android:minHeight="48dp"
-        android:layout_marginBottom="16dp" />
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray" />
 
     <TextView
         android:id="@+id/tv_publication_year"
@@ -67,20 +67,20 @@
         android:layout_height="wrap_content"
         android:text="Tahun Terbit"
         android:textColor="@color/black"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/et_publication_year"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:hint="Masukkan Tahun Terbit"
-        android:textColorHint="@color/gray"
-        android:textColor="@color/black"
+        android:inputType="textMultiLine"
         android:maxLength="50"
         android:maxLines="1"
-        android:inputType="textMultiLine"
         android:minHeight="48dp"
-        android:layout_marginBottom="16dp" />
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray" />
 
     <TextView
         android:id="@+id/tv_category"
@@ -88,20 +88,20 @@
         android:layout_height="wrap_content"
         android:text="Kategori"
         android:textColor="@color/black"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/et_category"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:hint="Masukkan Kategori Buku"
-        android:textColorHint="@color/gray"
-        android:textColor="@color/black"
+        android:inputType="textMultiLine"
         android:maxLength="50"
         android:maxLines="1"
-        android:inputType="textMultiLine"
         android:minHeight="48dp"
-        android:layout_marginBottom="16dp" />
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray" />
 
     <TextView
         android:id="@+id/tv_book_cover_url"
@@ -109,19 +109,19 @@
         android:layout_height="wrap_content"
         android:text="URL Cover Buku"
         android:textColor="@color/black"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/et_book_cover_url"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
         android:hint="Masukkan URL Cover Buku"
-        android:textColorHint="@color/gray"
-        android:textColor="@color/black"
-        android:maxLines="1"
         android:inputType="textMultiLine"
+        android:maxLines="1"
         android:minHeight="48dp"
-        android:layout_marginBottom="24dp" />
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray" />
 
     <Button
         android:id="@+id/btn_add_book"
@@ -129,6 +129,6 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/button"
         android:text="Tambahkan Buku"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
